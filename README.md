@@ -67,4 +67,20 @@ A scrollable list of widgets arranged linearly. List View is the most commonly u
 # FLOATING ACTION BUTTON
 A floating action button is a circular icon button that hovers over content to promote a primary action button in the application.  
 
+# NAVIGATION
+Navigation in flutter is based on a stack. The stack has pages/screens that the app has used from the beginning. When you want to change the screen, you call an object `Navigator`. This has 2 methods:  
+1. push()  -> Go to a particular/next screen. Therefore, you need to specify the route i.e. the page you want to load.  
+2. pop()  -> Go back  
+
+Flutter has `MaterialPageRoute` class which helps to achieve this. Both `push()` and `pop()` requires the current context.  
+
+# DROPDOWN BUTTON
+The DropdownButton `onChanged` expects a function. If given `null` while developing UI, the Dropdown list items will not be shown. 
+
+
+
+# Do's and Dont's
+1. First create the UI and then the functionality - onPress, onChanged, etc...  
+2. Make sure you are following a new tutorial as many tutorials will have depreciated packages.  
+3.  
 

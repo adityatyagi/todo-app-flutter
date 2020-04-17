@@ -48,9 +48,9 @@ class Todo {
     }
   }
 
-  // set date(String newDate) {
-  //   _date = newDate;
-  // }
+  set date(String newDate) {
+    _date = newDate;
+  }
 
   Map<String, dynamic> toMap() {
     var map = Map<String, dynamic>();

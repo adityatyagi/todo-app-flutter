@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/model/todo.dart';
 import 'package:todo_app/util/dbhelper.dart';
+import 'package:todo_app/screens/todoDetail.dart';
 
 class TodoList extends StatefulWidget {
   @override
@@ -30,7 +31,10 @@ class TodoListState extends State {
     return Scaffold(
       body: todoListItems(),
       floatingActionButton: FloatingActionButton(
-        onPressed: null,
+        onPressed: () {
+          // for adding a new todo, we pass a new todo item with empty title, low priority and an empty date
+          navigateToDetail(Todo('', 3, ''));
+        },
         tooltip: "Add New Todo",
         child: new Icon(Icons.add),
       ),
@@ -56,6 +60,7 @@ class TodoListState extends State {
               subtitle: Text(this.todos[position].date),
               onTap: () {
                 debugPrint("Tapped on " + this.todos[position].id.toString());
+                navigateToDetail(this.todos[position]);
               },
             ),
           );
@@ -76,7 +81,6 @@ class TodoListState extends State {
         for (int i = 0; i < count; i++) {
           // this will convert a simple object to a ToDo
           todoList.add(Todo.fromObject(result[i]));
-          debugPrint(todoList[i].title);
         }
 
         // updating the widget's state
@@ -103,6 +107,20 @@ class TodoListState extends State {
         break;
       default:
         return Colors.green;
+    }
+  }
+
+  // add/edit Todo - navigate to TodoDetail
+  // called when we click on the list item
+  // called when we click on Add Todo floating button
+  void navigateToDetail(Todo todo) async {
+    bool result = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TodoDetail(todo)),
+    );
+
+    if (result == true) {
+      getData();
     }
   }
 }
