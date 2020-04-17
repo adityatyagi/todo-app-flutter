@@ -83,3 +83,16 @@ The DropdownButton `onChanged` expects a function. If given `null` while develop
 1. First create the UI and then the functionality - onPress, onChanged, etc...  
 2. Make sure you are following a new tutorial as many tutorials will have depreciated packages.   
 
+# SCREENSHOTS
+
+## LIST VIEW
+![List](https://user-images.githubusercontent.com/18363595/79569006-7d30e580-80d4-11ea-843c-9ca0a2b6b4a9.jpg)  
+
+## ADD NEW TODO
+![Add](https://user-images.githubusercontent.com/18363595/79569002-7bffb880-80d4-11ea-9008-bc25459b7d73.jpg)  
+
+## MENU
+![Menu](https://user-images.githubusercontent.com/18363595/79569001-7ace8b80-80d4-11ea-89a2-36e5f204e8d4.jpg)  
+
+## EDIT TODO
+![Edit](https://user-images.githubusercontent.com/18363595/79568998-7a35f500-80d4-11ea-8b63-547f118c245c.jpg)
