@@ -81,6 +81,5 @@ The DropdownButton `onChanged` expects a function. If given `null` while develop
 
 # Do's and Dont's
 1. First create the UI and then the functionality - onPress, onChanged, etc...  
-2. Make sure you are following a new tutorial as many tutorials will have depreciated packages.  
-3.  
+2. Make sure you are following a new tutorial as many tutorials will have depreciated packages.   
 
